@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   get 'sessions/new'
 
-  get 'sites/index'
+  get '/', to: "sites#index"
 
-  get 'sites/about'
+  get '/about', to: "sites#about"
 
-  get 'sites/contact'
+  get '/contact', to: "sites#contact"
 
   get 'users/index'
 
@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   post '/sessions', to: "sessions#create"
 
   get '/signup', to: "users#new", as: "signup"
+
+  get '/logout', to: "sessions#destroy"
 
   resources :users
 
