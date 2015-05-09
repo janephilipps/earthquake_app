@@ -15,6 +15,14 @@ Rails.application.routes.draw do
 
   get 'users/edit'
 
+  get '/login', to: "sessions#new"
+
+  post '/sessions', to: "sessions#create"
+
+  get '/signup', to: "users#new", as: "signup"
+
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
