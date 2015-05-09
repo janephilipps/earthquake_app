@@ -15,4 +15,12 @@ class User < ActiveRecord::Base
     end
   end
 
+  def authenticate(unencrypted_password)
+    if BCrypt::Password.new(password_digest) == unencrypted_password
+      self
+    else
+      false
+    end
+  end
+
 end
