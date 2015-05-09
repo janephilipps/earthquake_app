@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
-  def index
-  end
+  before_action :logged_in?, only: [:show]
 
-  def show
+  def index
   end
 
   def new
