@@ -7,6 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <% if user_signed_in? %>
+    <h2>Hi <%= current_user.email %></h2>
+    <h2>Logout</h2>
+  <% else %>
+    <h2>Signup</h2>
+    <h2>Login</h2>
+  <% end %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%= yield %>

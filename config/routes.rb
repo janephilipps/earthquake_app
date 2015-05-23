@@ -2,6 +2,11 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {
     sessions: 'sessions'
+  }, path: '', path_names: {
+    sign_in: 'login',
+    sign_out: 'logout',
+    registration: '',
+    sign_up: 'signup'
   }
 
   root to: 'site#index'
