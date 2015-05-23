@@ -1,3 +1,19 @@
-<h1>Sites#index</h1>
-<p>Find me in app/views/sites/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Earthquake App</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <% if user_signed_in? %>
+
+    <p>Checklist:</p>
+  <% else %>
+    <p>Please login to access your checklist.</p>
+  <% end %>
+</body>
+</html>
+
 

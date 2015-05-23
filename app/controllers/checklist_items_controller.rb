@@ -1,0 +1,3 @@
+class ChecklistItemsController < ApplicationController
+
+end
