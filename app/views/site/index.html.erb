@@ -10,6 +10,22 @@
   <% if user_signed_in? %>
 
     <p>Checklist:</p>
+    <% @checklist_items.each do |c| %>
+      <div><%= c.description %></div>
+    <% end %>
+
+    <p>Add an item to your checklist:</p>
+
+    <%= form_for :checklist_item, url: checklist_items_path do |f|  %>
+      <div class="field">
+        <%= f.label :description %><br>
+        <%= f.text_field :description %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
+
   <% else %>
     <p>Please login to access your checklist.</p>
   <% end %>

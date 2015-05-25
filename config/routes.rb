@@ -16,4 +16,6 @@ Rails.application.routes.draw do
 
   get '/contact', to: 'site#contact'
 
+  resources :checklist_items
+
 end
