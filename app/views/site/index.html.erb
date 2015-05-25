@@ -11,7 +11,11 @@
 
     <p>Checklist:</p>
     <% @checklist_items.each do |c| %>
-      <div><%= c.description %></div>
+      <div>
+        <%= c.description %>
+        <%= link_to 'Delete', checklist_item_path(c),
+            method: :delete %>
+      </div>
     <% end %>
 
     <p>Add an item to your checklist:</p>
