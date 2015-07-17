@@ -1,0 +1,3 @@
+class EarthquakesController < ApplicationController
+
+end

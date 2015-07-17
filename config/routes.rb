@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get '/contact', to: 'site#contact'
 
+  get '/earthquakes', to: 'site#earthquakes'
+
   resources :checklist_items
 
 end

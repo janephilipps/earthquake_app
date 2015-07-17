@@ -8,4 +8,7 @@ class SiteController < ApplicationController
 
   def contact
   end
+
+  def earthquakes
+  end
 end
